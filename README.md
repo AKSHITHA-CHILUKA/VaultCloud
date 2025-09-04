@@ -1,32 +1,94 @@
-# A cloud storage of files
 
-Users are provided with AES encrption of files. <br /> 
+# A Cloud Storage of Files
 
-## Instructions for Web Client:
+Users are provided with **AES encryption of files** for secure storage and retrieval.  
 
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/Secure-Personal-Cloud.git
+cd Secure-Personal-Cloud
+```
+
+### 2. Create a virtual environment
+```bash
+python -m venv venv
+```
+Activate it:
+
+**Windows (PowerShell):**
+```bash
+venv\Scripts\activate
+```
+**Linux / MacOS:**
+```bash
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+All required packages are listed in requirements.txt. Install them with:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🖥️ Instructions for Web Client
 Run these commands inside the project directory:
-```python
-	python manage.py makemigrations
-	python manage.py migrate
-	python manage.py runserver
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
+Now open your browser and go to:
+👉 http://127.0.0.1:8000
+
+---
+
+## 🐧 Instructions for Linux Client
+Install dependencies:
+```bash
+pip install django-database-storage tabulate
+```
+Add spc executable to PATH:
+The bash executable spc is found inside:
+```bash
+Secure-Personal-Cloud/bin/
+```
+Add it to your environment PATH variable. Example:
+```bash
+export PATH=$PATH:/path/to/Secure-Personal-Cloud/bin
+```
+Run the client:
+```bash
+spc help
 ```
 
-Now open the url 127.0.0.1:8000 in your browser 
+---
 
-## Instructions for Linux Client:
+## 🪟 Instructions for Windows Client
+Make sure the virtual environment is activated (`venv\Scripts\activate`).
 
-Install the djagno's db-file storage :
-```python
-	pip install django-database-storage
+Install the same dependencies:
+```bash
+pip install django-database-storage tabulate
 ```
-Install tabulate :
-```python
-	pip install tabulate
+To run the client script on Windows, you can directly execute it using Python:
+```bash
+python bin\spc help
 ```
+(Or add the `bin\` folder to your system PATH for easier access.)
 
-Add the bash executable spc ( Found in Secure-Personal-Cloud/bin/ directory ) to your environment PATH variable and run:
+---
 
-```bash 
-	spc help
-```
+## ✅ Notes
+- Default database is SQLite (configured in `settings.py`).
+- For production, configure PostgreSQL or another supported database.
+- Static files are served from the `static/` directory.
+- Make sure to apply migrations before running the server.
+
+---
 

@@ -3,12 +3,19 @@ from django import forms
 from .models import Document
 
 
+# Custom widget that supports multiple file uploads
+class MultipleFileInput(forms.ClearableFileInput):
+    allow_multiple_selected = True
+
+
 class DocumentfolderForm(forms.ModelForm):
-    document = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True, 'webkitdirectory': True, 'directory': True}))
+    document = forms.FileField(
+        widget=MultipleFileInput(attrs={'multiple': True, 'webkitdirectory': True, 'directory': True})
+    )
 
     class Meta:
         model = Document
-        exclude = ['username','name']
+        exclude = ['username', 'name']
         widgets = {
             'document': DBClearableFileInput
         }
@@ -16,7 +23,8 @@ class DocumentfolderForm(forms.ModelForm):
 
 class DocumentForm(forms.ModelForm):
     document = forms.FileField(
-        widget=forms.ClearableFileInput(attrs={'multiple': True}))
+        widget=MultipleFileInput(attrs={'multiple': True})
+    )
 
     class Meta:
         model = Document
@@ -24,4 +32,3 @@ class DocumentForm(forms.ModelForm):
         widgets = {
             'document': DBClearableFileInput
         }
-

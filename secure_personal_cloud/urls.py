@@ -1,7 +1,6 @@
-from django.conf.urls import url
-from django.urls import path, include
-from . import views
+from django.urls import path, re_path, include
 from django.contrib import admin
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -11,7 +10,10 @@ urlpatterns = [
     path('upload_folder/', views.upload_folder, name='upload_folder'),
     path('', include('django.contrib.auth.urls')),
     path('files/', include('db_file_storage.urls')),
-    url(r'^delete/(.*)/$', views.delete, name='delete'),
+
+    # changed url() → re_path()
+    re_path(r'^delete/(.*)/$', views.delete, name='delete'),
+
     path('deadlocksf/', views.deadlocksetfalse, name='deadlocksf'),
-    path('deadlockst/', views.deadlocksettrue, name='deadlockst')
+    path('deadlockst/', views.deadlocksettrue, name='deadlockst'),
 ]
