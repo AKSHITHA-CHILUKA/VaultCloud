@@ -1,7 +1,19 @@
+# VaultCloud
 
-# A Cloud Storage of Files
+![VaultCloud Logo](secure_personal_cloud\static\images\vaultcloud_logo.png)
+
 
 Users are provided with **AES encryption of files** for secure storage and retrieval.  
+
+---
+
+## ✨ Features
+- 🔑 AES Encryption for files (secure storage & retrieval)  
+- 🌐 Web client with Django backend  
+- 🐧 Linux client with CLI support  
+- 🪟 Windows compatibility  
+- 📦 SQLite by default (PostgreSQL recommended for production)  
+- 🎨 Django Crispy Forms for clean UI  
 
 ---
 
@@ -92,3 +104,6 @@ python bin\spc help
 
 ---
 
+📜 License
+
+MIT License © 2025 – Developed with ❤️ by [Akshitha Chiluka , Gopal Jahnavika , V.Preethi , S.Bharathi Devi]
