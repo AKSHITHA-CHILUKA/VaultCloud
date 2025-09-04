@@ -1,6 +1,15 @@
 # VaultCloud
 
 ![VaultCloud Logo](secure_personal_cloud\static\images\vaultcloud_logo.png)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+![Django](https://img.shields.io/badge/django-5.0+-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/status-active-success)
+![GitHub stars](https://img.shields.io/github/stars/AKSHITHA-CHILUKA/VaultCloud?style=social)
+![GitHub forks](https://img.shields.io/github/forks/AKSHITHA-CHILUKA/VaultCloud?style=social)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![GitHub contributors](https://img.shields.io/github/contributors/AKSHITHA-CHILUKA/VaultCloud)
+
 
 
 Users are provided with **AES encryption of files** for secure storage and retrieval.  
